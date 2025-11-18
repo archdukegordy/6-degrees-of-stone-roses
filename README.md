@@ -10,3 +10,9 @@ This comes with a caveat: I don't know much about coding, so for now I'm using s
 <p>Right now, it's pretty simple. Band 1 and band 2 are listed as nodes. The edges (connecting lines) indicate how those two bands have some degree of connection. You can hover over the nodes or the edges to read more information.
 Eventually, it would be cool to create more in-depth pop-ups, or even pages for each band that list their connections. I'd also like to get into fact-checking and including sources to create a more accurate compendium. But for now, this is just me experimenting with a concept.
 I'm trying color-code the nodes into genres and subgenres. The edges are also color-coded based on the type of connection.</p>
+<br>
+<p>LIVE TESTING ON CODEPEN.IO</p>
+<p><link>https://codepen.io/archdukegordy/pen/VYabGvb</link></p>
+<br>
+<p>OTHER RESOURCES</p>
+<p><link>https://visjs.github.io/vis-network/docs/network/</link></p>
