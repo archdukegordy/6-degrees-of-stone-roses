@@ -1,4 +1,5 @@
 # 6-degrees-of-stone-roses
+<a href="https://archdukegordy.github.io/6-degrees-of-stone-roses/">VISIT THE PAGE HERE!</a>
 <p>Who influenced what band? Which bands have shared members? Which musicians have collaborated? Which bands have beef? All that and more is being recorded here.</p>
 <br>
 <p>WHAT IS THIS PROJECT?</p>
