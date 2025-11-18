@@ -1,0 +1,374 @@
+//-----HTML-----
+
+<div id="mynetwork"></div>
+
+//-----CSS-----
+
+#mynetwork {
+  width: 100%;
+  height: 650px;
+  border: 1px solid #ccc;
+}
+
+
+//-----JS-----
+
+// ==========================
+  // NODES
+  // ==========================
+  const nodes = new vis.DataSet([
+    {
+      id: 1,
+      label: "1. The Stone Roses",
+            title: "First album came out in 1989\nGenres: Madchester",
+      color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+      shape: "box"
+    },
+
+    {
+      id: 2,
+      label: "2. Primal Scream",
+            title: "Founded by tJaMC drummer Bobby Gillespie\nand Jim Beattie in 1982.\nGenres: Neo-Psychedelica",
+      color: { background: "#dae639", border: "#99b004" }, // Neo-Psychedelica
+      shape: "box"
+    },
+
+    {
+      id: 3,
+      label: "3. Oasis",
+           title: "Genres: Britpop, Rock",
+      color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+      shape: "box"
+    },
+
+    {
+      id: 4,
+      label: "4. Happy Mondays",
+      title: "Genres: Madchester",
+      color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+      shape: "box"
+    },
+
+    {
+      id: 5,
+      label: "5. The Seahorses",
+            title: "Genres: Rock",
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+      shape: "box"
+    },
+    
+    {id: 6,
+    label: "6. The Jesus and\nMary Chain",
+     title: "Genres: Post-Punk, Rock",
+    color: { background: "#f5b958", border: "#d19508" }, // Post-Punk
+    shape: "box"
+    },
+    
+    {id: 7,
+    label: "7. Dexys Midnight\nRunners",
+     title: "Genres: Pop Rock, Celtic Soul",
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+    
+    {id: 8,
+    label: "8. The Clash",
+     title: "Genres: Punk Rock",
+    color: { background: "#e0a13a", border: "#b57f02" }, // Punk Rock
+    shape: "box"
+    },
+    
+      {id: 9,
+    label: "9. The Chemical\nBrothers",
+       title: "Genres: Electronic",
+    color: { background: "#c9ff8f", border: "#60a63a" }, // Electronic
+    shape: "box"
+    }, 
+    
+    {id: 10,
+    label: "10. The Pixies",
+     title: "Genres: Indie Rock",
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+    
+    {id: 11,
+    label: "11. The Beatles",
+     title: "Genre: Pop Rock",
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+    
+    {id: 12,
+    label: "12. The Charlatans",
+     title: "Genres: Madchester",
+    color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+    shape: "box"
+    },
+    
+    {id: 13,
+    label: "13. Blur",
+     title: "Genres: Britpop, Rock",
+    color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+    shape: "box"
+    },
+    
+     {id: 14,
+    label: "14. Gorillaz",
+     title: "Genre: Rock, Electronic",
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+    
+    {id: 15,
+    label: "15. Beck",
+     title: "Genres: Alternative Rock, Folk Rock, Hip Hop, Funk, Psychedelica",
+    color: { background: "#f7ad3e", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+    
+    {id: 16,
+    label: "16. Elastica",
+     title: "Genres: Britpop, Alternative Rock",
+    color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+    shape: "box"
+    },
+    
+     {id: 17,
+    label: "17. Bobby Byrd",
+     title: "Genres: R&B, Soul, Funk",
+    color: { background: "#f582a0", border: "#d4335e" }, // R&B
+    shape: "box"
+    },
+    
+    {id: 18,
+    label: "18. Geno Washington",
+     title: "Genres: R&B, Soul",
+    color: { background: "#f582a0", border: "#d4335e" }, // R&B
+    shape: "box"
+    },
+    
+    {id: 19,
+    label: "19. MF DOOM",
+     title: "Genres: Alternative Hip Hop",
+    color: { background: "#e49ff5", border: "#9b3eb3" }, // Hip Hop
+    shape: "box"
+    },
+  ]);
+
+  // ==========================
+  // EDGES
+  // ==========================
+  const edges = new vis.DataSet([
+    {
+      from: 1,
+      to: 2,
+      title: "Stone Roses bassist Mani joined Primal Scream\nfrom 1997 to 2011 due to the dissolution\nof the Stone Roses.",
+      label: "Shared Member",
+      arrows: { from: { enabled: true, type: "bar" },
+              to: {enabled: true,
+                  type: "bar"},
+              },       // standard arrow
+      color: { color: "#16a137" },
+      font: { align: "middle" }
+    },
+
+    {
+      from: 1,
+      to: 3,
+      label: "Inspired By",
+      arrows: { from: { enabled: true, type: "normal" } },
+      dashes: true,                   
+      color: { color: "#8a44f2" },
+      font: { align: "middle" }
+    },
+
+    {
+      from: 1,
+      to: 4,
+      label: "Rivalry",
+            title: "Madchester Contemporaries",
+      arrows: { to: { enabled: true, type: "box" }, from: {enabled: true, type: "box"} }, // bar arrow
+      color: { color: "#d1332e" },
+      font: { align: "middle" }
+    },
+
+    {
+      from: 1,
+      to: 5,
+      label: "Split Off",
+            title: "John Squire's short-lived band after\nthe dissolution of the Stone Roses.",
+      arrows: { to: { enabled: true, type: "normal" } },
+      color: { color: "#f57011" },
+      font: { align: "middle" }
+    },
+    
+    {
+      from: 1,
+      to: 7,
+      label: "Inspired By",
+      arrows: { to: { enabled: true, type: "normal" } },
+      dashes: true,
+      color: { color: "#8a44f2" },     
+      font: { align: "middle" }
+    },
+    
+    {
+      from: 1,
+      to: 8,
+      label: "Inspired By",
+      arrows: { to: { enabled: true, type: "normal" } },
+      dashes: true,
+      color: { color: "#8a44f2" },
+      font: { align: "middle" }
+    },
+    
+    {from: 1,
+    to: 17,
+    label: "Sampled",
+     title: "The drum break from Bobby Byrd's\n'Hot Pants - Bonus Beats' was sampled\nfor the Stone Roses' 1989 song 'Fool's Gold'.",
+    arrows: {to: { enabled: true, type: "normal" } },
+    color: { color: "#1515e8" },
+    font: {align: "middle" }
+    },
+    
+    {
+      from: 1,
+      to: 18,
+      label: "Inspired By",
+      title: "Stone Roses frontman Ian Brown met Geno Washington\nat a party in 1983. The R&B musician told Brown, 'You\nshould be a star,' and 'get in a band and go for it,' which\nconvinced Brown to pursue a music career with John Squire.",
+      arrows: { to: { enabled: true, type: "normal" } },
+      dashes: true,
+      color: { color: "#8a44f2" },
+      font: { align: "middle" }
+    },
+    
+    {from: 2,
+    to: 6,
+    label: "Shared Member",
+     title: "Bobbie Gillespie split off from tJaMC\nin 1986 to focus primarily on Primal\nScream after having juggled both\nbands since 1984.",
+    arrows: {from: { enabled: true, type: "bar" }, to: { enabled: true, type: "bar"} },
+    color: { color: "#16a137" },
+    font: {align: "middle" }
+    },
+    
+    {from: 3,
+    to: 9,
+    label: "Collaborated with",
+    title: "Noel Gallagher provided vocals for the\nChemical Brothers song 'Let Forever Be'.",
+    arrows: {to: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+    
+    {from: 3,
+    to: 11,
+    label: "Inspired By",
+    arrows: {to: { enabled: true, type: "normal" } },
+     dashes: true,
+    color: { color: "#8a44f2" },
+    font: {align: "middle" }
+    },
+    
+        {from: 3,
+    to: 13,
+     title: "in the Battle of Britpop, Blur and Oasis\nwere often pitted against each other\nby the media in terms of style, economic\nclass origins, and chart success.\nThis started when both bands released singles\non the same day on August 14, 1995.",
+    label: "Rivalry",
+    arrows: {to: { enabled: true, type: "box" }, from: { enabled: true, type: "box"} },
+    color: { color: "#d1332e" },
+    font: {align: "middle" }
+    },
+    
+    {from: 6,
+    to: 10,
+     title: "The Pixies covered tJaMC's 1989 song 'Head On' in 1991.",
+    label: "Covered a Song",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#ca47cc" },
+    font: {align: "middle" }
+    },
+    
+    {
+      from: 7,
+      to: 18,
+      label: "Inspired By",
+      title: "Dexys 1980 song 'Geno' is a direct tribute to the R&B musician.",
+      arrows: { to: { enabled: true, type: "normal" } },
+      dashes: true,
+      color: { color: "#8a44f2" },
+      font: { align: "middle" }
+    },
+    
+    {from: 9,
+    to: 12,
+     title: "Tim Burgess provided vocals for the\nChemical Brothers song 'The Boxer'.",
+    label: "Collaborated With",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+    
+    {from: 13,
+    to: 14,
+    label: "Shared Member",
+     title: "Blur frontman Damon Albarn founded the\nGorillaz in 1998 and has led the collaborative\nproject since.",
+    arrows: {from: { enabled: true, type: "bar" }, to: { enabled: true, type: "bar"} },
+    color: { color: "#16a137" },
+    font: {align: "middle" }
+    },
+    
+    {
+      from: 13,
+      to: 16,
+      label: "Other",
+      title: "Blur frontman Damon Albarn dated Elastica's\nlead singer Justine Frischmann from 1991 to 1998.",
+      dashes: true,
+      color: { color: "#7a2a18" },
+      font: { align: "middle" }
+    },
+    
+ {from: 14,
+    to: 15,
+    label: "Collaborated with",
+    title: "Beck contributed vocals to two Gorillaz songs:\n'The Valley of the Pagans' and 'Possession Island'.",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+    
+    {from: 14,
+    to: 19,
+    label: "Collaborated with",
+    title: "MF DOOM contributed vocals and lyrics to the\n2005 Gorillaz song 'November has Come'.",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+  ]);
+
+  // ==========================
+  // NETWORK SETUP
+  // ==========================
+  const container = document.getElementById("mynetwork");
+
+  const data = { nodes, edges };
+
+  const options = {
+    physics: {
+      enabled: true,
+      stabilization: { iterations: 200 },
+      barnesHut: {
+        springLength: 300,
+      }
+    },
+    edges: {
+      font: { size: 14, color: "#333" }
+    },
+    nodes: {
+      borderWidth: 2,
+      shape: "dot",
+      font: { color: "#111", size: 16 }
+    }
+  };
+
+  new vis.Network(container, data, options);
