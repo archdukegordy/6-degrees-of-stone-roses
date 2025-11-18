@@ -166,6 +166,13 @@
     color: { background: "#e49ff5", border: "#9b3eb3" }, // Hip Hop
     shape: "box"
     },
+
+    {id: 20,
+    label: "20. Mazzy Star",
+     title: "Genres: Rock",
+    color: { background: "#f7ad3e", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
   ]);
 
   // ==========================
@@ -313,8 +320,17 @@
     
     {from: 9,
     to: 12,
+     label: "Collaborated With",
      title: "Tim Burgess provided vocals for the\nChemical Brothers song 'The Boxer'.",
-    label: "Collaborated With",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+
+     {from: 9,
+    to: 20,
+      label: "Collaborated With",
+     title: "Hope Sandoval provided vocals for the\nChemical Brothers song 'Asleep From Day'.",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
