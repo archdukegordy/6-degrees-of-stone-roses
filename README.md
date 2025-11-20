@@ -13,7 +13,7 @@ Eventually, it would be cool to create more in-depth pop-ups, or even pages for 
 I'm trying color-code the nodes into genres and subgenres. The edges are also color-coded based on the type of connection.</p>
 <br>
 <p>LIVE TESTING ON CODEPEN.IO</p>
-<p><link>https://codepen.io/archdukegordy/pen/VYabGvb</link></p>
+<p><link>https://codepen.io/archdukegordy/pen/EaKvdPg</link></p>
 <br>
 <p>OTHER RESOURCES</p>
 <p><link>https://visjs.github.io/vis-network/docs/network/</link></p>
