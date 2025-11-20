@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Network Graph</title>
+  <title>6 Degrees of Stone Roses</title>
 
   <!-- CSS -->
   <style>
@@ -33,7 +33,7 @@
       id: 1,
       label: "1. The Stone Roses",
             title: "First album came out in 1989\nGenres: Madchester",
-      color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
       shape: "box"
     },
 
@@ -41,7 +41,7 @@
       id: 2,
       label: "2. Primal Scream",
             title: "Founded by tJaMC drummer Bobby Gillespie\nand Jim Beattie in 1982.\nGenres: Neo-Psychedelica",
-      color: { background: "#dae639", border: "#99b004" }, // Neo-Psychedelica
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
       shape: "box"
     },
 
@@ -49,7 +49,7 @@
       id: 3,
       label: "3. Oasis",
            title: "Genres: Britpop, Rock",
-      color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
       shape: "box"
     },
 
@@ -57,7 +57,7 @@
       id: 4,
       label: "4. Happy Mondays",
       title: "Genres: Madchester",
-      color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
       shape: "box"
     },
 
@@ -72,7 +72,7 @@
     {id: 6,
     label: "6. The Jesus and\nMary Chain",
      title: "Genres: Post-Punk, Rock",
-    color: { background: "#f5b958", border: "#d19508" }, // Post-Punk
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
@@ -86,7 +86,7 @@
     {id: 8,
     label: "8. The Clash",
      title: "Genres: Punk Rock",
-    color: { background: "#e0a13a", border: "#b57f02" }, // Punk Rock
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
@@ -114,14 +114,14 @@
     {id: 12,
     label: "12. The Charlatans",
      title: "Genres: Madchester",
-    color: { background: "#f5e645", border: "#b8b204" }, // Madchester
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
     {id: 13,
     label: "13. Blur",
      title: "Genres: Britpop, Rock",
-    color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
@@ -135,14 +135,14 @@
     {id: 15,
     label: "15. Beck",
      title: "Genres: Alternative Rock, Folk Rock, Hip Hop, Funk, Psychedelica",
-    color: { background: "#f7ad3e", border: "#c7a600" }, // Rock
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
     {id: 16,
     label: "16. Elastica",
      title: "Genres: Britpop, Alternative Rock",
-    color: { background: "#f7ad3e", border: "#c78500" }, // Britpop
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
     
@@ -170,7 +170,43 @@
     {id: 20,
     label: "20. Mazzy Star",
      title: "Genres: Rock",
-    color: { background: "#f7ad3e", border: "#c7a600" }, // Rock
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+    shape: "box"
+    },
+
+{id: 21,
+    label: "21. A Tribe Called Quest",
+     title: "Genres: Hip Hop",
+    color: { background: "#e49ff5", border: "#9b3eb3" }, // Hip Hop
+    shape: "box"
+    },
+
+{id: 22,
+    label: "22. Del the Funky Homosapien",
+     title: "Genres: Hip Hop, Rap",
+    color: { background: "#e49ff5", border: "#9b3eb3" }, // Hip Hop
+    shape: "box"
+    },
+    
+    {id: 23,
+    label: "23. Ice Cube",
+     title: "Genres: Hip Hop, Gangsta Rap",
+    color: { background: "#e49ff5", border: "#9b3eb3" }, // Hip Hop
+    shape: "box"
+    },
+    
+    {
+      id: 24,
+      label: "24. Black Grape",
+      title: "Formed by Happy Mondays members Shaun Ryder\nand Bez. They recruited members of the group\nRuthless Rap Assassins.\nGenres: Rock, Dance, Funk, Madchester, Britpop",
+      color: { background: "#ffdd57", border: "#c7a600" }, // Rock
+      shape: "box"
+    },
+
+{id: 25,
+    label: "25. Inspiral Carpets",
+     title: "Genre: Rock, Madchester",
+    color: { background: "#ffdd57", border: "#c7a600" }, // Rock
     shape: "box"
     },
   ]);
@@ -261,6 +297,16 @@
       color: { color: "#8a44f2" },
       font: { align: "middle" }
     },
+
+{
+      from: 1,
+      to: 25,
+      label: "Other",
+      title: "Mani and Inspiral Carpets member Clint Boon\nhad a band called 'The Mill,' which eventually\nfell apart up as they pursued playing in other bands.\nfrom 'The Stone Roses and the Resurrection of British Pop'\nby John Robb, pg. 29",
+      dashes: true,
+      color: { color: "#7a2a18" },
+      font: { align: "middle" }
+    },
     
     {from: 2,
     to: 6,
@@ -274,7 +320,7 @@
     {from: 3,
     to: 9,
     label: "Collaborated with",
-    title: "Noel Gallagher provided vocals for the\nChemical Brothers song 'Let Forever Be'.",
+    title: "Noel Gallagher collaborated with the\nChemical Brothers for the song 'Let Forever Be'.",
     arrows: {to: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
@@ -291,17 +337,27 @@
     
         {from: 3,
     to: 13,
-     title: "in the Battle of Britpop, Blur and Oasis\nwere often pitted against each other\nby the media in terms of style, economic\nclass origins, and chart success.\nThis started when both bands released singles\non the same day on August 14, 1995.",
     label: "Rivalry",
+title: "in the Battle of Britpop, Blur and Oasis\nwere often pitted against each other\nby the media in terms of style, economic\nclass origins, and chart success.\nThis started when both bands released singles\non the same day on August 14, 1995.",
     arrows: {to: { enabled: true, type: "box" }, from: { enabled: true, type: "box"} },
     color: { color: "#d1332e" },
     font: {align: "middle" }
     },
     
+    {
+      from: 4,
+      to: 24,
+      label: "Split Off",
+            title: "Shaun Ryder and Bez split from Happy Mondays\ndue to Shaun's drug addictions and disagreements over\nrevenues of other band members.",
+      arrows: { to: { enabled: true, type: "normal" } },
+      color: { color: "#f57011" },
+      font: { align: "middle" }
+    },
+    
     {from: 6,
     to: 10,
-     title: "The Pixies covered tJaMC's 1989 song 'Head On' in 1991.",
     label: "Covered a Song",
+title: "The Pixies covered tJaMC's 1989 song 'Head On' in 1991.",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#ca47cc" },
     font: {align: "middle" }
@@ -321,7 +377,7 @@
     {from: 9,
     to: 12,
      label: "Collaborated With",
-     title: "Tim Burgess provided vocals for the\nChemical Brothers song 'The Boxer'.",
+     title: "Tim Burgess collaborated with the\nChemical Brothers for the song 'The Boxer'.",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
@@ -330,7 +386,16 @@
      {from: 9,
     to: 20,
       label: "Collaborated With",
-     title: "Hope Sandoval provided vocals for the\nChemical Brothers song 'Asleep From Day'.",
+     title: "Hope Sandoval collaborated with the\nChemical Brothers for the song 'Asleep From Day'.",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+
+{from: 9,
+    to: 21,
+      label: "Collaborated With",
+     title: "Q-Tip collaborated with the\nChemical Brothers for the songs:\n'Galvanize' (2005) and 'Go' (2015).",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
@@ -358,7 +423,7 @@
  {from: 14,
     to: 15,
     label: "Collaborated with",
-    title: "Beck contributed vocals to two Gorillaz songs:\n'The Valley of the Pagans' and 'Possession Island'.",
+    title: "Beck collaborated with the Gorillaz for these songs:\n'The Valley of the Pagans' and 'Possession Island'.",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
@@ -367,10 +432,29 @@
     {from: 14,
     to: 19,
     label: "Collaborated with",
-    title: "MF DOOM contributed vocals and lyrics to the\n2005 Gorillaz song 'November has Come'.",
+    title: "MF DOOM collaborated with the\n2005 Gorillaz for the song 'November has Come'.",
     arrows: {from: { enabled: true, type: "normal" } },
     color: { color: "#146eb8" },
     font: {align: "middle" }
+    },
+
+{from: 14,
+    to: 22,
+    label: "Collaborated with",
+    title: "Del collaborated with the  Gorillaz for many songs\non their debut album 'Gorillaz' (2001).",
+    arrows: {from: { enabled: true, type: "normal" } },
+    color: { color: "#146eb8" },
+    font: {align: "middle" }
+    },
+    
+    {
+      from: 22,
+      to: 23,
+      label: "Other",
+      title: "Del is Ice Cube's cousin. He worked with Ice Cube\nin his group, 'Da Lench Mob.' Ice Cube was also Del's\nexecutive producer for his 1991 debut album\n'I Wish My Brother George Was Here.'",
+      dashes: true,
+      color: { color: "#7a2a18" },
+      font: { align: "middle" }
     },
   ]);
 
